@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Ingredients Multiplier</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 1rem;
+      font-family: Arial, sans-serif;
+      max-width: 100vw;
+      overflow-x: hidden;
+      font-size: large;
+      font-weight: bold;
+      color:white;
+      background-color: black;
+      
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .meal {
+      padding: 1rem;
+      font-size: larger;
+      color: #faf6f6;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-image: url(image/477734422_1055055616637922_7116448774312522099_n.jpg);
+         
+    }
+    .meal img {
+        width: 100%;
+        height: 20px;
+    }
+
+    label, input {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    h3 {
+      margin-top: 0;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 style="color: #ccc;">WOLFLINK</h1>
+  <h2>Menu Ingredients</h2>
+  <div class="grid">
+    <div class="meal">
+      <h3>Beef tapa & chorizo w/ gravy</h3>
+      <label for="qty1">Enter quantity:</label>
+      <input type="number" id="qty1" value="0">
+      <ul>
+        <li id="rice1">200g rice</li>
+        <li id="egg1">1 egg</li>
+        <li id="chorizo1">2pcs regular chorizo</li>
+        <li id="tapa1">80g tapa</li>
+      </ul>
+    </div>
+
+    <div class="meal">
+      <h3>Burger steak and sausage w/ gravy</h3>
+      <label for="qty2">Enter quantity:</label>
+      <input type="number" id="qty2" value="0">
+      <ul>
+        <li id="rice2">200g rice</li>
+        <li id="egg2">1 egg</li>
+        <li id="patty2">100g Breakfast patty</li>
+        <li id="sausage2">100g burdog sausage</li>
+      </ul>
+    </div>
+
+    <div class="meal">
+      <h3>Spam steak & sausge</h3>
+      <label for="qty3">Enter quantity:</label>
+      <input type="number" id="qty3" value="0">
+      <ul>
+        <li id="rice3">200g rice</li>
+        <li id="egg3">1 egg</li>
+        <li id="spam1">100g spam</li>
+        <li id="sausage3">100g burdog sausage</li>
+      </ul>
+    </div>
+
+    <div class="meal">
+      <h3>Chicken popcorn & sausage</h3>
+      <label for="qty4">Enter quantity:</label>
+      <input type="number" id="qty4" value="0">
+      <ul>
+        <li id="rice4">200g rice</li>
+        <li id="egg4">1 egg</li>
+        <li id="chicken1">100g chicken popcorn</li>
+        <li id="sausage4">50g burdog sausage</li>
+      </ul>
+    </div>
+
+    <div class="meal">
+      <h3>Pork steak and sausage</h3>
+      <label for="qty5">Enter quantity:</label>
+      <input type="number" id="qty5" value="0">
+      <ul>
+        <li id="rice5">200g rice</li>
+        <li id="egg5">1 egg</li>
+        <li id="pork1">100g porkchop</li>
+        <li id="sausage5">100g burdog sausage</li>
+      </ul>
+    </div>
+
+    <div class="meal">
+      <h3>Pork steak, Bacon and cabonaca</h3>
+      <label for="qty6">Enter quantity:</label>
+      <input type="number" id="qty6" value="0">
+      <ul>
+        <li id="pasta1">120g cabonara pasta</li>
+        <li id="sauce1">75g carbonara</li>
+        <li id="pork2">100g pork slice</li>
+        <li id="bacon1">50g bacon</li>
+      </ul>
+    </div>
+    <div class="meal">
+      <h3>Katsu spam sausage</h3>
+      <label for="qty7">Enter quantity:</label>
+      <input type="number" id="qty7" value="0">
+        <ul>
+      <li id="rice6">250 rice</li>
+      <li id="egg6">2 eggs</li>
+      <li id="sausage6">100g spam</li>
+      <li id="sauce2">100g sausage</li>
+      <li id="pork3">150g curry sauce</li>
+        </ul>
+    </div>
+    <div class="meal">
+      <h3>Katsu curry sausage</h3>
+      <label for="qty8">Enter quantity:</label>
+      <input type="number" id="qty8" value="0">
+         <ul>
+      <li id="rice7">250 rice</li>
+      <li id="egg7">2 eggs</li>
+      <li id="sausage7">100g sausage</li>
+      <li id="sauce3">100g curry sauce</li>
+      <li id="pork4">150g pork slice</li>
+        </ul>  
+    </div>
+    <div class="meal">
+      <h3>Hamburg curry sausage</h3>
+      <label for="qty9">Enter quantity:</label>
+      <input type="number" id="qty9" value="0">
+        <ul>
+      <li id="rice8">250 rice</li>
+      <li id="egg8">2 eggs</li>
+      <li id="patty3">100g breakfast patty</li>
+      <li id="sausage8">100g sausage</li>
+      <li id="sauce4">150g curry sauce</li>
+        </ul>  
+      </div>
+      <div class="meal">
+        <h3>Bacon steak</h3>
+        <label for="qty10">Enter quantity:</label>
+        <input type="number" id="qty10" value="0">
+          <ul>
+        <li id="rice9">250 rice</li>
+        <li id="egg9">2 eggs</li>
+        <li id="bacon2">2 pcs bacon</li>
+          </ul>  
+        </div>
+        <div class="meal">
+       <h3>Spam steak</h3>
+        <label for="qty11">Enter quantity:</label>
+        <input type="number" id="qty11" value="0">
+          <ul>
+        <li id="rice10">250 rice</li>
+        <li id="egg10">2 eggs</li>
+        <li id="spam2">2 pcs spam</li>
+       </ul>  
+        </div> 
+        <div class="meal">
+        <h3>Breakfast sausage</h3>
+        <label for="qty12">Enter quantity:</label>
+        <input type="number" id="qty12" value="0">
+         <ul>
+        <li id="rice11">250 rice</li>
+        <li id="egg11">2 eggs</li>
+        <li id="patty4">2 pcs patty</li>
+          </ul>  
+        </div>
+        <div class="meal">
+            <h3>Chorizo monster breakfast</h3>
+            <label for="qty13">Enter quantity:</label>
+            <input type="number" id="qty13" value="0">
+              <ul>
+            <li id="rice12">250 rice</li>
+            <li id="egg12">2 eggs</li>
+            <li id="chorizo2">5 pcs chorizo</li>
+              </ul>  
+            </div>
+            <div class="meal">
+                <h3>Sausage mountain melt</h3>
+                <label for="qty14">Enter quantity:</label>
+                <input type="number" id="qty14" value="">
+                  <ul>
+                <li id="sausage9">5 pcs sausage</li>
+                <li id="fries">100g fries</li>
+                <li id="cheese">1 whole cheese</li>
+                  </ul>  
+                </div>
+                <div class="meal">
+                    <h3>Wagyu beef sausage</h3>
+                    <label for="qty15">Enter quantity:</label>
+                    <input type="number" id="qty15" value="0">
+                      <ul>
+                    <li id="sausage10">2 pcs sausage</li>
+                    <li id="wagyu">200g wagtu beef</li>
+                    <li id="fries1">100g fries</li>
+                      </ul>  
+                    </div>
+                    <div class="meal">
+                        <h3>Fried chicken and sausage</h3>
+                        <label for="qty16">Enter quantity:</label>
+                        <input type="number" id="qty16" value="0">
+                          <ul>
+                        <li id="chicken">5 pcs chicken</li>
+                        <li id="fries2">100g fries</li>
+                        <li id="sausage11">100g sausage</li>
+                          </ul>  
+                        </div>
+                        <div class="meal">
+                            <h3>3 Little piggies</h3>
+                            <label for="qty17">Enter quantity:</label>
+                            <input type="number" id="qty17" value="0">
+                              <ul>
+                            <li id="rice13">250g chicken</li>
+                            <li id="egg13">2 eggs</li>
+                            <li id="bacon3">100g bacon</li>
+                            <li id="patty5">100g breakfast patty</li>
+                              </ul>  
+                            </div>       
+                            <div class="meal">
+                                <h3> The hangover</h3>
+                                <label for="qty18">Enter quantity:</label>
+                                <input type="number" id="qty18" value="0">
+                                  <ul>
+                                <li id="rice14">250g chicken</li>
+                                <li id="egg14">2 eggs</li>
+                                <li id="chorizo3">2 pcs chorizo</li>
+                                <li id="spam3">100g spam</li>
+                                <li id="wagyu1">70g wagyu beef</li>
+                                  </ul>  
+                                </div>
+                                <div class="meal">
+                                    <h3>Wolf's stew</h3>
+                                    <label for="qty19">Enter quantity:</label>
+                                    <input type="number" id="qty19" value="0">
+                                      <ul>
+                                    <li id="ramen">1 ramen</li>
+                                    <li id="egg15">1 whole egg</li>
+                                    <li id="cheese1">1 whole cheese</li>
+                                    <li id="spam4">100g spam</li>
+                                    <li id="sausage12">1 breakfast piggy sausage</li>
+                                      </ul>  
+                                    </div> 
+                                    <div class="meal">
+                                        <h3>Trio Bucket</h3>
+                                        <label for="qty20">Enter quantity:</label>
+                                        <input type="number" id="qty20" value="0">
+                                          <ul>
+                                        <li id="rice16">250 rice</li>
+                                        <li id="egg16">2 egg</li>
+                                        <li id="sausage13">100g sausage (jala)</li>
+                                        <li id="shrimp">120g shrimp</li>
+                                        <li id="steak1">130g steak bites</li>
+                                          </ul>  
+                                        </div> 
+                                        <div class="meal">
+                                        <h3>Steak and sausage</h3>
+                                        <label for="qty21">Enter quantity:</label>
+                                        <input type="number" id="qty21" value="0">
+                                          <ul>
+                                        <li id="rice17">250 rice</li>
+                                        <li id="egg17">2 egg</li>
+                                        <li id="sausage14">100g sausage</li>
+                                        <li id="steak2">150g beef steak</li>
+                                          </ul>  
+                                        </div>
+                                        <div class="meal">
+                                            <h3>Steak and shrimp</h3>
+                                            <label for="qty22">Enter quantity:</label>
+                                            <input type="number" id="qty22" value="0">
+                                              <ul>
+                                            <li id="rice18">250 rice</li>
+                                            <li id="egg18">2 egg</li>
+                                            <li id="shrimp1">120g shrimp</li>
+                                            <li id="cheese2">0.5 half cheese</li>
+                                            <li id="steak3">130g steak bites</li>
+                                              </ul>  
+                                            </div>  
+                                            <div class="meal">
+                                                <h3>Carbonara</h3>
+                                                <label for="qty23">Enter quantity:</label>
+                                                <input type="number" id="qty23" value="0">
+                                                  <ul>
+                                                <li id="pasta2">200g pasta carb.</li>
+                                                <li id="egg19">1 egg yolk</li>
+                                                <li id="sauce5">150g carb. sauce</li>
+                                                <li id="bacon4">100g whole bacon</li>
+                                                  </ul>  
+                                                </div>  
+                                                <div class="meal">
+                                                    <h3>Creamy spaghetti</h3>
+                                                    <label for="qty24">Enter quantity:</label>
+                                                    <input type="number" id="qty24" value="0">
+                                                      <ul>
+                                                    <li id="pasta3">200g spag pasta</li>
+                                                    <li id="sauce6">120g spag sauce</li>
+                                                    <li id="sausage15">100g cheese sausage</li>
+                                                      </ul>  
+                                                    </div> 
+                                                    <div class="meal">
+                                                      <h3>Pork chop sausage spag</h3>
+                                                      <label for="qty25">Enter quantity:</label>
+                                                      <input type="number" id="qty25" value="0">
+                                                        <ul>
+                                                      <li id="pasta4">120g spag pasta</li>
+                                                      <li id="sauce7">75g spag sauce</li>
+                                                      <li id="chicken2">100g fork slice</li>
+                                                      <li id="sausage16">0.5 half sausage 6 cuts</li>
+                                                        </ul>  
+                                                      </div> 
+                                                      <div class="meal">
+                                                        <h3>Fried chicken spaghetti sausage</h3>
+                                                        <label for="qty26">Enter quantity:</label>
+                                                        <input type="number" id="qty26" value="0">
+                                                          <ul>
+                                                        <li id="pasta5">120g spag pasta</li>
+                                                        <li id="sauce8">75g spag sauce</li>
+                                                        <li id="chicken3">2 cuts chicken</li>
+                                                        <li id="sausage17">0.5 half sausage 6 cuts</li>
+                                                          </ul>  
+                                                        </div>
+                                                        <div style="border: 1px solid #ccc; border-radius: 8px; padding: 16px; margin: 10px;">
+                                                          <h2>Submit & View History</h2>
+                                                          <button id="submitBtn">Submit Ingredients</button>
+                                                          <button id="clearHistoryBtn">Clear History</button>
+                                                          <div id="history" style="margin-top: 20px;"></div>
+                                                        </div>
+                                                                           
+  </div>
+
+  <!-- Your original script remains unchanged -->
+  <script>
+    
+
+    // First Meal
+    const qty1 = document.getElementById("qty1");
+    qty1.addEventListener("input", function () {
+      const q = parseInt(qty1.value) || 0;
+      document.getElementById("rice1").textContent = (200 * q) + "g rice";
+      document.getElementById("egg1").textContent = (1 * q) + " egg" + (q > 1 ? "s" : "");
+      document.getElementById("chorizo1").textContent = (2 * q) + "pcs regular chorizo";
+      document.getElementById("tapa1").textContent = (80 * q) + "g tapa";
+    });
+
+    const qty2 = document.getElementById("qty2");
+    qty2.addEventListener("input", function () {
+      const q = parseInt(qty2.value) || 0;
+      document.getElementById("rice2").textContent = (200 * q) + "g rice";
+      document.getElementById("egg2").textContent = (1 * q) + " egg" + (q > 1 ? "s" : "");
+      document.getElementById("patty2").textContent = (100 * q) + "g Breakfast patty";
+      document.getElementById("sausage2").textContent = (100 * q) + "g burdog sausage";
+    });
+
+    const qty3 = document.getElementById("qty3");
+    qty3.addEventListener("input", function () {
+      const q = parseInt(qty3.value) || 0;
+      document.getElementById("rice3").textContent = (200 * q) + "g rice";
+      document.getElementById("egg3").textContent = (1 * q) + " egg" + (q > 1 ? "s" : "");
+      document.getElementById("spam1").textContent = (100 * q) + "g Spam";
+      document.getElementById("sausage3").textContent = (100 * q) + "g burdog sausage";
+    });
+
+    const qty4 = document.getElementById("qty4");
+    qty4.addEventListener("input", function () {
+      const q = parseInt(qty4.value) || 0;
+      document.getElementById("rice4").textContent = (200 * q) + "g rice";
+      document.getElementById("egg4").textContent = (1 * q) + " egg" + (q > 1 ? "s" : "");
+      document.getElementById("chicken1").textContent = (100 * q) + "g chicken popcorn";
+      document.getElementById("sausage4").textContent = (50 * q) + "g burdog sausage";
+    });
+
+    const qty5 = document.getElementById("qty5");
+    qty5.addEventListener("input", function () {
+      const q = parseInt(qty5.value) || 0;
+      document.getElementById("rice5").textContent = (200 * q) + "g rice";
+      document.getElementById("egg5").textContent = (1 * q) + " egg" + (q > 1 ? "s" : "");
+      document.getElementById("pork1").textContent = (100 * q) + "g porkchop";
+      document.getElementById("sausage5").textContent = (100 * q) + "g burdog sausage";
+    });
+
+    const qty6 = document.getElementById("qty6");
+    qty6.addEventListener("input", function () {
+      const q = parseInt(qty6.value) || 0;
+      document.getElementById("pasta1").textContent = (120 * q) + "g carbonara pasta";
+      document.getElementById("sauce1").textContent = (75 * q) + "g carbonara sauce";
+      document.getElementById("pork2").textContent = (100 * q) + "g pork slice";
+      document.getElementById("bacon1").textContent = (50 * q) + "g bacon";
+    });
+
+    const qty7 = document.getElementById("qty7");
+    qty7.addEventListener("input", function () {
+      const q = parseInt(qty7.value) || 0;
+      document.getElementById("rice6").textContent = (250 * q) + "g rice";
+      document.getElementById("egg6").textContent = (2 * q) + " eggs";
+      document.getElementById("sausage6").textContent = (100 * q) + "g spam";
+      document.getElementById("sauce2").textContent = (100 * q) + "g sausage";
+      document.getElementById("pork3").textContent = (150 * q) + "g curry sauce";
+    });
+
+    const qty8 = document.getElementById("qty8");
+    qty8.addEventListener("input", function () {
+      const q = parseInt(qty8.value) || 0;
+      document.getElementById("rice7").textContent = (250 * q) + "g rice";
+      document.getElementById("egg7").textContent = (2 * q) + " eggs";
+      document.getElementById("sausage7").textContent = (100 * q) + "g sausage";
+      document.getElementById("sauce3").textContent = (150 * q) + "g curry sauce";
+      document.getElementById("pork4").textContent = (100 * q) + "g pork slice";
+    });
+
+    const qty9 = document.getElementById("qty9");
+    qty9.addEventListener("input", function () {
+      const q = parseInt(qty9.value) || 0;
+      document.getElementById("rice8").textContent = (250 * q) + "g rice";
+      document.getElementById("egg8").textContent = (2 * q) + " eggs";
+      document.getElementById("patty3").textContent = (100 * q) + "g breakfast patty";
+      document.getElementById("sausage8").textContent = (100 * q) + "g sausage";
+      document.getElementById("sauce4").textContent = (150 * q) + "g curry sauce";
+    });
+
+    const qty10 = document.getElementById("qty10");
+    qty10.addEventListener("input", function () {
+      const q = parseInt(qty10.value) || 0;
+      document.getElementById("rice9").textContent = (250 * q) + "g rice";
+      document.getElementById("egg9").textContent = (2 * q) + " eggs";
+      document.getElementById("bacon2").textContent = (2 * q) + "pcs bacon";
+    });
+
+    const qty11 = document.getElementById("qty11");
+    qty11.addEventListener("input", function () {
+      const q = parseInt(qty11.value) || 0;
+      document.getElementById("rice10").textContent = (250 * q) + "g rice";
+      document.getElementById("egg10").textContent = (2 * q) + " eggs";
+      document.getElementById("spam2").textContent = (2 * q) + "pcs spam";
+    });
+
+    const qty12 = document.getElementById("qty12");
+    qty12.addEventListener("input", function () {
+      const q = parseInt(qty12.value) || 0;
+      document.getElementById("rice11").textContent = (250 * q) + "g rice";
+      document.getElementById("egg11").textContent = (2 * q) + " eggs";
+      document.getElementById("patty4").textContent = (2 * q) + "pcs patty";
+    });
+
+    const qty13 = document.getElementById("qty13");
+    qty13.addEventListener("input", function () {
+      const q = parseInt(qty13.value) || 0;
+      document.getElementById("rice12").textContent = (250 * q) + "g rice";
+      document.getElementById("egg12").textContent = (2 * q) + " eggs";
+      document.getElementById("chorizo2").textContent = (5 * q) + "pcs chorizo";
+    });
+
+    const qty14 = document.getElementById("qty14");
+    qty14.addEventListener("input", function () {
+      const q = parseInt(qty14.value) || 0;
+      document.getElementById("sausage9").textContent = (5 * q) + " pcs sausage";
+      document.getElementById("fries").textContent = (100 * q) + "g fries";
+      document.getElementById("cheese").textContent = (1 * q) + " whole cheese";
+    });
+
+    const qty15 = document.getElementById("qty15");
+    qty15.addEventListener("input", function () {
+      const q = parseInt(qty15.value) || 0;
+      document.getElementById("sausage10").textContent = (2 * q) + " pcs sausage";
+      document.getElementById("wagyu").textContent = (200 * q) + "g wagyu";
+      document.getElementById("fries1").textContent = (100 * q) + "g fries";
+    });
+
+    const qty16 = document.getElementById("qty16");
+    qty16.addEventListener("input", function () {
+      const q = parseInt(qty16.value) || 0;
+      document.getElementById("chicken").textContent = (5 * q) + " pcs chicken";
+      document.getElementById("fries2").textContent = (100 * q) + "g fries";
+      document.getElementById("sausage11").textContent = (100 * q) + "g sausage";
+    });
+
+    const qty17 = document.getElementById("qty17");
+    qty17.addEventListener("input", function () {
+      const q = parseInt(qty17.value) || 0;
+      document.getElementById("rice13").textContent = (250 * q) + "g rice";
+      document.getElementById("egg13").textContent = (2 * q) + " eggs";
+      document.getElementById("bacon3").textContent = (100 * q) + "g bacon";
+      document.getElementById("patty5").textContent = (100 * q) + "g breakfast patty";
+    });
+
+    const qty18 = document.getElementById("qty18");
+    qty18.addEventListener("input", function () {
+      const q = parseInt(qty18.value) || 0;
+      document.getElementById("rice14").textContent = (250 * q) + "g rice";
+      document.getElementById("egg14").textContent = (2 * q) + " eggs";
+      document.getElementById("chorizo3").textContent = (2 * q) + " pcs chorizo";
+      document.getElementById("spam3").textContent = (100 * q) + "g spam ";
+      document.getElementById("wagyu1").textContent = (70 * q) + "g wagyu beef";
+    });
+
+    const qty19 = document.getElementById("qty19");
+    qty19.addEventListener("input", function () {
+      const q = parseInt(qty19.value) || 0;
+      document.getElementById("ramen").textContent = (1 * q) + " ramen";
+      document.getElementById("egg15").textContent = (1 * q) + " whole egg" + (q > 1 ? "s" : "");
+      document.getElementById("cheese1").textContent = (1 * q) + " whole cheese";
+      document.getElementById("spam4").textContent = (100 * q) + "g spam ";
+      document.getElementById("sausage12").textContent = (1 * q) + " breakfast piggy sausage ";
+    });
+
+    const qty20 = document.getElementById("qty20");
+    qty20.addEventListener("input", function () {
+      const q = parseInt(qty20.value) || 0;
+      document.getElementById("rice16").textContent = (250 * q) + "g rice";
+      document.getElementById("egg16").textContent = (2 * q) + " eggs";
+      document.getElementById("sausage13").textContent = (100 * q) + "g sausage (jala)";
+      document.getElementById("shrimp").textContent = (120 * q) + "g shrimp";
+      document.getElementById("steak1").textContent = (130 * q) + "g steak bites";
+    });
+
+    const qty21 = document.getElementById("qty21");
+    qty21.addEventListener("input", function () {
+      const q = parseInt(qty21.value) || 0;
+      document.getElementById("rice17").textContent = (250 * q) + "g rice";
+      document.getElementById("egg17").textContent = (2 * q) + " eggs";
+      document.getElementById("sausage14").textContent = (100 * q) + "g sausage";
+      document.getElementById("steak2").textContent = (130 * q) + "g beef steak";
+    });
+
+    const qty22 = document.getElementById("qty22");
+    qty22.addEventListener("input", function () {
+      const q = parseInt(qty22.value) || 0;
+      document.getElementById("rice18").textContent = (250 * q) + "g rice";
+      document.getElementById("egg18").textContent = (2 * q) + " eggs";
+      document.getElementById("shrimp1").textContent = (120 * q) + "g shrimp";
+      document.getElementById("cheese2").textContent = (0.5 * q) + " half cheese";
+      document.getElementById("steak3").textContent = (130 * q) + "g steak bites";
+    });
+
+    const qty23 = document.getElementById("qty23");
+    qty23.addEventListener("input", function () {
+      const q = parseInt(qty23.value) || 0;
+      document.getElementById("pasta2").textContent = (200 * q) + "g pasta";
+      document.getElementById("egg19").textContent = (1 * q) + " egg yolk";
+      document.getElementById("sauce5").textContent = (120 * q) + "g carb. sauce";
+      document.getElementById("bacon4").textContent = (100 * q) + "g whole bacon";
+    });
+
+    const qty24 = document.getElementById("qty24");
+    qty24.addEventListener("input", function () {
+      const q = parseInt(qty24.value) || 0;
+      document.getElementById("pasta3").textContent = (200 * q) + "g spag pasta";
+      document.getElementById("sauce6").textContent = (120 * q) + "g spag sauce";
+      document.getElementById("sausage15").textContent = (100 * q) + "g cheese sausage";
+    });
+
+    const qty25 = document.getElementById("qty25");
+    qty25.addEventListener("input", function () {
+      const q = parseInt(qty25.value) || 0;
+      document.getElementById("pasta4").textContent = (120 * q) + "g spag pasta";
+      document.getElementById("sauce7").textContent = (75 * q) + "g spag sauce";
+      document.getElementById("chicken2").textContent = (100 * q) + "g pork slice";
+      document.getElementById("sausage16").textContent = (0.5 * q) + " half sausage 6 cuts";
+    });
+
+    const qty26 = document.getElementById("qty26");
+    qty26.addEventListener("input", function () {
+      const q = parseInt(qty26.value) || 0;
+      document.getElementById("pasta5").textContent = (120 * q) + "g spag pasta";
+      document.getElementById("sauce8").textContent = (75 * q) + "g spag sauce";
+      document.getElementById("chicken3").textContent = (2 * q) + " cuts chicken";
+      document.getElementById("sausage17").textContent = (0.5 * q) + " half sausage 6 cuts";
+    });
+    
+    const submitBtn = document.getElementById("submitBtn");
+const clearHistoryBtn = document.getElementById("clearHistoryBtn");
+const historyDiv = document.getElementById("history");
+
+function collectIngredients() {
+  const result = {};
+  
+  for (let i = 1; i <= 26; i++) {
+    const qtyInput = document.getElementById(`qty${i}`);
+    if (qtyInput && qtyInput.value > 0) {
+      const mealName = qtyInput.closest("div").querySelector("h2, h3, h4, h5, h6")?.textContent || `Meal ${i}`;
+      result[mealName] = { Quantity: qtyInput.value };
+      const ingredients = qtyInput.closest("div").querySelectorAll("ul li");
+      ingredients.forEach((li, idx) => {
+        result[mealName][`Ingredient ${idx + 1}`] = li.textContent;
+      });
+    }
+  }
+  return result;
+}
+
+function saveToLocalStorage(data) {
+  let history = JSON.parse(localStorage.getItem("ingredientHistory")) || [];
+  history.push(data);
+  localStorage.setItem("ingredientHistory", JSON.stringify(history));
+}
+
+function displayHistory() {
+  const history = JSON.parse(localStorage.getItem("ingredientHistory")) || [];
+  historyDiv.innerHTML = "<h3>Saved Entries:</h3>";
+  if (history.length === 0) {
+    historyDiv.innerHTML += "<p>No saved data yet.</p>";
+    return;
+  }
+  history.forEach((entry, index) => {
+    let html = `<div style="margin-bottom: 12px;"><strong>Entry ${index + 1}</strong><ul>`;
+    for (const meal in entry) {
+      html += `<li><strong>${meal}</strong><ul>`;
+      for (const key in entry[meal]) {
+        html += `<li>${key}: ${entry[meal][key]}</li>`;
+      }
+      html += `</ul></li>`;
+    }
+    html += `</ul></div><hr>`;
+    historyDiv.innerHTML += html;
+  });
+}
+
+function clearHistory() {
+  localStorage.removeItem("ingredientHistory");
+  historyDiv.innerHTML = "<p>History cleared.</p>";
+}
+
+submitBtn.addEventListener("click", () => {
+  const data = collectIngredients();
+  if (Object.keys(data).length > 0) {
+    saveToLocalStorage(data);
+    displayHistory();
+  } else {
+    alert("Please enter at least one quantity before submitting.");
+  }
+});
+
+clearHistoryBtn.addEventListener("click", clearHistory);
+window.addEventListener("load", displayHistory);
+
+  </script>
+</body>
+</html>
+
